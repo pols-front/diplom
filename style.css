@@ -65,13 +65,12 @@ form {
   margin: auto;
   padding: 0 15px;
 }
-  
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 
 .menu-list {
   display: flex;
@@ -138,7 +137,7 @@ form {
 
 .trend {
 	width: 415px;
-	height: 315px;
+	border: 3px solid  #e1d9bd;
 }
 
 .one-block {
@@ -146,7 +145,6 @@ form {
   background-color: gray;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 
 .two-block {
@@ -154,7 +152,6 @@ form {
   background-color: gray;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 
 .three-block {
@@ -162,7 +159,6 @@ form {
   background-color: gray;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 
 .four-block {
@@ -170,7 +166,6 @@ form {
   background-color: gray;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 
 .main {
@@ -570,4 +565,87 @@ form {
 
 .copyright-link {
   color: #adadad;
+}
+
+/* MEDIA */
+
+/* media mobile*/
+@media (max-width: 640px) {
+
+	/* header*/
+  .head {
+  background-image: url(images\banner-mobile.jpg);
+}
+
+  .head-wrapper {
+  width: 100%;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 215px;
+}
+
+.menu-list {
+  display: none;
+}
+
+.title {
+  padding-top: 40px;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.4em;
+  margin: auto;
+}
+
+/*trends*/
+
+
+.trends-wrapper {
+	flex-wrap: wrap;
+	width: 330px;
+}
+
+/*main*/
+.main {
+	max-width: 640px;
+	margin: 44px 15px;
+}
+
+.contents-wrapper {
+	
+	flex-wrap: wrap;
+}
+
+.content {
+	width: 330px;
+	margin: 0;
+}
+
+.news {
+	flex-wrap: wrap;
+}
+
+.sidebar {
+	margin: 0;
+}
+
+.goods-wrapper {
+	flex-wrap: wrap;
+}
+
+.footer-wrapper {
+	max-width: 360px;
+	padding: 0;
+	margin: 0;
+	
+}
+
+
 }
