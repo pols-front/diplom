@@ -104,8 +104,6 @@ form {
   line-height: 1.4;
 }
 
-/* ========== MAIN ========== */
-
 .contents {
   display: flex;
   flex-wrap: wrap;
@@ -113,60 +111,72 @@ form {
   margin-top: 64px;
 }
 
+/* ========== TRENDS ========== */
+
 .trends {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
 
+.heading-trends {
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
 .heading-trends::after {
   content: "";
   display: block;
   width: 66px;
-  border-bottom-width: 3px;
-  border-bottom-style: solid;
-  border-bottom-color: #e1d9bd;
+  border-bottom: 3px solid #e1d9bd;
   margin: 14px auto 24px auto;
 }
 
 .trends-wrapper {
 	display: flex;
+	position: relative;
 	justify-content: space-between;
 	margin-bottom: 64px;
 }
 
 .trend {
-	width: 415px;
-	border: 3px solid  #e1d9bd;
+	width: 410px;
+}
+
+.trend::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 365px;
+	height: 100%;
+	border: 3px solid  #83723e;
+	opacity: 0.6;
+}
+
+.case {
+  background-color: rgb(245, 231, 205);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 35px;
 }
 
 .one-block {
   background-image: url(images\trend1.jpg);
-  background-color: gray;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .two-block {
   background-image: url(images\trend2.jpg);
-  background-color: gray;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .three-block {
   background-image: url(images\trend3.jpg);
-  background-color: gray;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .four-block {
   background-image: url(images\trend4.jpg);
-  background-color: gray;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
+
+/* ========== MAIN ========== */
 
 .main {
   width: 780px;
@@ -567,19 +577,19 @@ form {
   color: #adadad;
 }
 
-/* MEDIA */
+/*========== MEDIA ==========*/
 
-/* media mobile*/
+/*=== media mobile ===*/
 @media (max-width: 640px) {
 
 	/* header*/
-  .head {
+
+.head {
   background-image: url(images\banner-mobile.jpg);
 }
 
-  .head-wrapper {
+.head-wrapper {
   width: 100%;
-  margin: auto;
   padding: 0 15px;
 }
 
@@ -601,18 +611,36 @@ form {
   text-transform: uppercase;
   color: white;
   font-size: 1.4em;
-  margin: auto;
 }
 
-/*trends*/
+	/* trends */
 
+.trends {
+	margin-top: 0;
+}
 
 .trends-wrapper {
 	flex-wrap: wrap;
 	width: 330px;
 }
 
-/*main*/
+.trend:nth-child(odd)::before {
+	width: 330px;
+	height: 145px;
+}
+
+.trend:nth-child(2)::before {
+	width: 330px;
+	height: 199px;
+}
+
+.trend:nth-child(4)::before {
+	width: 330px;
+	height: 175px;
+}
+
+	/* main */
+
 .main {
 	max-width: 640px;
 	margin: 44px 15px;
@@ -632,19 +660,24 @@ form {
 	flex-wrap: wrap;
 }
 
+	/* aside */
+
 .sidebar {
 	margin: 0;
 }
+
+	/* goods */
 
 .goods-wrapper {
 	flex-wrap: wrap;
 }
 
+	/* footer */
+
 .footer-wrapper {
 	max-width: 360px;
 	padding: 0;
 	margin: 0;
-	
 }
 
 
