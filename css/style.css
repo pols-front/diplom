@@ -39,10 +39,6 @@ form {
 
 /* ========== HEADER ========== */
 
-.popup {
-	position: absolute;
-}
-
 .head {
   background-image: url(../images/banner-bg.jpg);
   background-color: burlywood;
@@ -175,6 +171,7 @@ form {
   height: 320px;
   padding: 55px;
   z-index: -2;
+  align-content: flex-end;
 }
 
 .case-trend::after {
@@ -411,7 +408,7 @@ form {
   border: 0 solid #f4f7f6;
   background-color: #f4f7f6;
   
-  font-family: " OpenSans Regular", sans-serif;
+  font-family: "OpenSans Regular", sans-serif;
 }
 
 .button-search {
@@ -428,11 +425,6 @@ form {
 
 .button-search:hover {
   background-color: #a39054;
-}
-
-.button-search:focus {
-  outline: none;
-  border-color: #9b59b6;
 }
 
 .subscribe  {
@@ -474,11 +466,6 @@ form {
 
 .button-email:hover {
   background-color: #a39054;
-}
-
-.button-email:focus {
-  outline: none;
-  border-color: #9b59b6;
 }
 
 .categories  {
@@ -764,55 +751,74 @@ form {
 
 	/* trends */
 
-.trends {
-	margin-top: 0;
-}
-
 .trends-wrapper {
-	flex-wrap: wrap;
-	width: 330px;
+	flex-direction: column;
 }
 
-.trend:nth-child(odd)::before {
-	width: 330px;
-	height: 145px;
+.trend {
+	width: 100%;
 }
 
-.trend:nth-child(2)::before {
-	width: 330px;
-	height: 199px;
+.trend:nth-child(1n+2) {
+	margin-left: 0;
+	margin-top: 3px;
 }
 
-.trend:nth-child(4)::before {
-	width: 330px;
-	height: 175px;
+.border::before {
+	width: 280px;
+	height: 150px;
+	margin-top: 140px;
 }
+
 
 	/* main */
 
-.main {
-	max-width: 640px;
-	margin: 44px 15px;
-}
-
 .contents-wrapper {
-	
 	flex-wrap: wrap;
 }
 
-.content {
-	width: 330px;
-	margin: 0;
+.main {
+	width: 100%;
 }
 
 .news {
 	flex-wrap: wrap;
+	margin-bottom: 65px;
+}
+
+.news:nth-of-type(1n+2) {
+  margin-top: 0;
+}
+
+.content {
+	margin: 0;
 }
 
 	/* aside */
 
 .sidebar {
-	margin: 0;
+	margin: auto;
+	width: 100%;
+}
+
+.search  {
+  margin-top: 60px;
+  width: 300px;
+}
+
+.input-search {
+  width: 250px;
+  padding: 20px 15px;
+}
+
+.input-email {
+  width: 300px;
+  padding: 20px 15px;
+
+}
+
+.button-email {
+  width: 300px;
 }
 
 	/* goods */
