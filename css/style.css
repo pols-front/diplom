@@ -209,13 +209,9 @@ form {
 
 .contents-wrapper {
   margin: auto;
-  padding: 0 15px;
+
   display: flex;
   justify-content: space-between;
-}
-
-.content {
-  margin-left: 30px;
 }
 
 .news {
@@ -233,7 +229,7 @@ form {
   font-weight: bolder;
   text-transform: uppercase;
   font-size: 12px;
-  margin-bottom: 14px;
+  padding: 14px 0;
 }
 
 .tag-link {
@@ -251,6 +247,7 @@ form {
 .heading {
   text-transform: uppercase;
   font-size: 16px;
+  padding-bottom: 35px;
 }
 
 .heading-link {
@@ -266,6 +263,7 @@ form {
 .data {
   font-size: 12px;
   display: flex;
+  padding-bottom: 30px;
 }
 
 .date {
@@ -529,7 +527,7 @@ form {
 .good::before {
 	content: "";
 	position: absolute;
-	margin-top: 170px;
+	margin-top: 190px;
 	margin-left: -25px;
 	width: 345px;
 	height: 260px;
@@ -736,12 +734,13 @@ form {
 
 .main {
 	width: 330px;
-	margin: auto;
 }
 
 .news {
 	flex-wrap: wrap;
 	margin-bottom: 35px;
+	width: 330px;
+	padding: 0 15px;
 }
 
 .news::after {
@@ -752,8 +751,12 @@ form {
 	margin-top: 40px;
 }
 
+.image {
+	width: 330px;
+}
+
 .content {
-	margin: 0;
+	width: 100%;
 }
 
 .tags {
@@ -808,7 +811,6 @@ form {
 }
 
 .good::before {
-	margin-top: 170px;
 	margin-left: -22px;
 }
 
@@ -837,6 +839,10 @@ form {
   background-image: url(../images/banner-bg-tablet.jpg);
 }
 
+.menu-list {
+  display: none;
+}
+
 	/* trends */
 
 .trends-wrapper {
@@ -861,11 +867,75 @@ form {
 }
 
 .border::before {
-	margin: 155px 20px;
+	margin: 135px 20px;
 	width: 46%;
 	height: 24%;
 }
 
+	/* main */
+
+.main {
+	width: 400px;
+}
+
+.news {
+	flex-wrap: wrap;
+}
+
+.news:nth-of-type(1n+2) {
+  margin-top: 45px;
+}
+
+.news::after {
+	content: "";
+	border: 1px solid gray;
+	opacity: 0.2;
+	width: 390px;
+	margin-top: 35px;
+}
+
+.image {
+	width: 390px;
+}
+
+.content {
+  width: 400px;
+}
+
+	/* aside */
+
+.sidebar {
+	width: 270px;
+	padding-left: 30px;
+}
+
+	/* goods */
+
+.goods {
+	width: 700px;
+}
+
+.goods-wrapper {
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	padding: 0 15px;
+}
+
+.good {
+	width: 300px;
+}
+
+.good:nth-last-of-type(even) {
+	padding-left: 70px;
+}
+
+.good::before {
+	height: 275px;
+}
+
+.good:nth-of-type(1n+3) {
+	padding-top: 50px;
+}
 
 }
 
@@ -891,6 +961,14 @@ form {
 
 .contents-wrapper {
   width: 1200px;
+}
+
+.content {
+  margin-left: 30px;
+}
+
+.image {
+	width: 380px;
 }
 
 .heading-content {
