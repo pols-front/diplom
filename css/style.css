@@ -671,7 +671,7 @@ form {
 
 /*=== media MOBILE ===*/
 
-@media (max-width: 640px) {
+@media (orientation: portrait) and (max-width: 640px) {
 
 	/* header*/
 
@@ -689,6 +689,12 @@ form {
   justify-content: center;
   align-items: center;
   margin-top: 215px;
+}
+
+.header::after {
+	border-image: url(../svg/free-icon-menu-482609.png);
+	background-repeat: no-repeat;
+	background-position: left-top;
 }
 
 .menu-list {
@@ -827,6 +833,35 @@ form {
 }
 
 }
+
+@media (orientation: landscape) and (max-width: 640px) {
+.trends-wrapper {
+  flex-wrap: wrap;
+}
+
+.trend {
+	box-sizing: border-box;
+	width: 49.8%;
+}
+
+.trend:nth-child(even) {
+	margin-left: 3px;
+}
+
+.trend:nth-child(3) {
+	margin-top: 3px;
+}
+
+.trend:nth-child(4) {
+	margin-top: 3px;
+}
+
+.border::before {
+	margin: 135px 20px;
+	width: 46%;
+	height: 24%;
+}
+} 
 
 
 /*=== media TABLET ===*/
