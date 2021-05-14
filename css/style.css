@@ -214,9 +214,13 @@ form {
   justify-content: space-between;
 }
 
+.main {
+	margin: auto;
+}
+
 .news {
   display: flex;
-  justify-content: space-between;
+  padding: 0  15px;
 }
 
 .news:nth-of-type(1n+2) {
@@ -289,6 +293,11 @@ form {
 }
 
 /* ========== ASIDE ========== */
+
+.sidebar {
+	margin: 0;
+	margin-left: 35px;
+}
 
 .heading-aside::after {
   content: "";
@@ -726,7 +735,6 @@ form {
 	flex-wrap: wrap;
 	margin-bottom: 35px;
 	width: 330px;
-	padding: 0 15px;
 }
 
 .news::after {
@@ -756,7 +764,6 @@ form {
 	/* aside */
 
 .sidebar {
-	margin: auto;
 	width: 330px;
 }
 
@@ -914,15 +921,20 @@ form {
 .head::before {
   content: "";
   position: absolute;
-  background-image: url(../svg/open_menu_icon_181199.svg);
+  background-image: url(../arq-menu-512.png);
   background-repeat: no-repeat;
-  background-position: right top;
-  background-size: 60px;
+  top: 0;
+  right: 0;
+  background-size: 140px;
   z-index: 1;
 }
 
 .menu-list {
   display: none;
+}
+
+.title {
+	font-size: 35px;
 }
 
 	/* trends */
@@ -1141,9 +1153,26 @@ form {
 	display: flex;
 	flex-wrap: wrap;
 	width: 390px;
-	z-index: 2;
 	background-color: #ffffff;
 	font-size: 13px;
+	z-index: 6;
+}
+
+.case-black-popup {
+	position: relative;
+}
+
+.black-popup::after {
+	content: "";
+	position: absolute;
+	background-color: #000000;
+	background-size: cover;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0.5;
+	z-index: 5;
 }
 
 .heading-popup {
@@ -1183,6 +1212,7 @@ form {
   background-image: url(../svg/form-arrows.svg);
   background-repeat: no-repeat;
   background-color: #f4f7f6;
+  font-size: 13px;
 
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -1266,16 +1296,35 @@ form {
   background-color: #83723ee5;
 }
 
+.x {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 3px;
+
+	background-image: url(../svg/form-x.svg); 
+	background-repeat: repeat;
+	background-position: center center;
+	background-size: 25px;
+
+	top: -30px;
+	right: 0;  
+}
+
+.popup-close {
+	display: none;
+}
+
 /*=== media MOBILE POPUP ===*/
 
 @media (max-width: 640px) {
 .popup {	
 	width: 330px;
-	margin: 50px 15px 0;
+	margin: 45px 2.6rem 0;
 }
 
 .heading-popup {
-	font-size: 15px;
+	font-size: 14px;
 	padding: 25px 110px 20px;
 }
 
@@ -1318,7 +1367,7 @@ form {
 @media (min-width: 641px) and (max-width: 1200px) {
 
 .popup {	
-	margin: 235px 185px 0;
+	margin: 235px 280px 0;
 }
 
 }
