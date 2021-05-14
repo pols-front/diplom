@@ -8,29 +8,39 @@
 	<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-
-	<form class="popup">
-		<div class="container-popup">
-			<h2 class="heading">ваш фидбек</h2>
-			<div class="popup-case">
-				<div class="case-list"> Как часто вы заходите на сайт?
-					<select class="list">
-						<option value="s1">Почти каждый день</option>
-						<option value="s2">Раз в неделю</option>
-						<option value="s3">Раз в месяц</option>
-						<option value="s3">Редко</option>
-					</select>
+	<div class="popup">
+		<h2 class="heading-popup">ваш фидбек</h2>
+		<div class="popup-case">
+			<label class="case-list"> Как часто вы заходите на сайт?
+				<select class="list">
+					<option value="s1">Почти каждый день</option>
+					<option value="s2">Раз в неделю</option>
+					<option value="s3">Раз в месяц</option>
+					<option value="s3">Редко</option>
+				</select>
+			</label>
+			<div class="radio">Вы подписаны на e-mail рассылку?
+				<div class="container-radio">
+					<div class="radio-case">
+						<label>
+							<input class="input-radio" type="radio" name="radio-group"><div class="answer">Да</div>
+						</label>
+					</div>
+					<div class="radio-case">
+						<label>
+							<input class="input-radio" type="radio" name="radio-group"><div class="answer">Нет</div>
+						</label>
+					</div>
 				</div>
-				<div>
-					Вы подписаны на e-mail рассылку?
-					<div class="answer">Да<input type="radio"></div>
-					<div class="answer">Нет<input type="radio"></div>
-				</div>
+			</div>
+			<div class="case-question">Расскажите, какой контент вы хотели бы видеть на нашем сайте?
 				<textarea class="question-popup" placeholder="Может, больше рецептов?"></textarea>
-				<div class="case-button"><button class="button">отправить</button></div>
+			</div>
+			<div class="case-button">
+				<button class="button-popup">отправить</button>
 			</div>
 		</div>
-	</form>
+	</div>
 
 	<header class="head">
 		<div class="head-wrapper">
