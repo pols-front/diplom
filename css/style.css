@@ -703,8 +703,8 @@ form {
   position: absolute;
   background-image: url(../svg/open_menu_icon_181199.svg);
   background-repeat: no-repeat;
-  background-position: right top;
-  background-size: 30px;
+  background-position: right 15px top 30px;
+  background-size: 35px;
   z-index: 1;
 }
 
@@ -729,20 +729,18 @@ form {
 
 .main {
 	width: 330px;
+	margin: 0 15px;
 }
 
 .news {
 	flex-wrap: wrap;
-	margin-bottom: 35px;
 	width: 330px;
+	border-bottom: 3px solid #eeeeee;
+	padding-bottom: 25px;
 }
 
-.news::after {
-	content: "";
-	border-bottom: 2px solid gray;
-	opacity: 0.2;
-	width: 330px;
-	margin-top: 40px;
+.news:nth-of-type(5n) {
+	border-bottom: 3px solid #ffffff;
 }
 
 .images {
@@ -832,7 +830,7 @@ form {
 }
 
 .border::before {
-	width: 290px;
+	width: 330px;
 	height: 150px;
 	margin-top: 140px;
 	margin-left: 45px;
@@ -921,11 +919,10 @@ form {
 .head::before {
   content: "";
   position: absolute;
-  background-image: url(../arq-menu-512.png);
+  background-image: url(../svg/open_menu_icon_181199.svg);
   background-repeat: no-repeat;
-  top: 0;
-  right: 0;
-  background-size: 140px;
+  background-position: right 30px top 40px;
+  background-size: 50px;
   z-index: 1;
 }
 
@@ -975,18 +972,13 @@ form {
 
 .news {
 	flex-wrap: wrap;
-}
-
-.news:nth-of-type(1n+2) {
-  margin-top: 45px;
-}
-
-.news::after {
-	content: "";
-	border-bottom: 2px solid gray;
-	opacity: 0.2;
 	width: 390px;
-	margin-top: 35px;
+	border-bottom: 3px solid #eeeeee;
+	padding-bottom: 35px;
+}
+
+.news:nth-of-type(5n) {
+	border-bottom: 3px solid #ffffff;
 }
 
 .images {
@@ -1320,7 +1312,7 @@ form {
 @media (max-width: 640px) {
 .popup {	
 	width: 330px;
-	margin: 45px 2.6rem 0;
+	margin: 55px 2.6rem 0;
 }
 
 .heading-popup {
@@ -1367,7 +1359,7 @@ form {
 @media (min-width: 641px) and (max-width: 1200px) {
 
 .popup {	
-	margin: 235px 280px 0;
+	margin: 235px 190px 0;
 }
 
 }
